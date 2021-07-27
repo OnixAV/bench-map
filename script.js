@@ -6,17 +6,20 @@ DG.then(function () {
         zoom: 12,
     });
 
+    map.setLang('ru');
+    map.getLang();
+
     map.locate({ setView: true, watch: true }) // определение по дефолту местоположения пользователя
         .on('locationfound', function (e) {
             DG.marker([e.latitude, e.longitude]).addTo(map);
         })
 
-        .on('locationerror', function (e) {
-            DG.popup()
-                .setLatLng(map.getCenter())
-                .setContent('Доступ к определению местоположения отключён')
-                .openOn(map);
-        });
+    .on('locationerror', function (e) {
+        DG.popup()
+            .setLatLng(map.getCenter())
+            .setContent('Доступ к определению местоположения отключён')
+            .openOn(map);
+    });
 
     DG.control.location().addTo(map); // кнопка определения местоположения пользователя
 });

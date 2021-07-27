@@ -1,16 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <div id="map" style="width:500px; height:400px"></div>
+    <div class="header">
+        <div class="wrap">
+            <div class="menu">
+                <div class="main_page">
+                    <a href="#">
+                        <p class="p_menu">Главная</p>
+                    </a>
+                </div>
+                <div class="info">
+                    <a href="#">
+                        <p class="p_menu">О нас</p>
+                    </a>
+                </div>
+                <div class="login">
+                    <a href="#">
+                        <p class="p_menu">Войти</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="background_map">
+            <div class="wrap">
+                <div class="info_main">
+                    <p class="p_info">Не знаете где посидеть?</p>
+                    <p class="p_info">Все скамейки города отображены на карте</p>
+                    <p class="p_info">С помощью нашего сайта вы можете быстро найти скамейку возле себя</p>
+                    <!-- <p class="p_info">А так же отмечайте другие скамейки</p> -->
+                </div>
+
+                <div id="map" class="block_map"></div>
+
+                <div class="block_info">
+                    <div class="items">
+                        <p class="p_block_info">Находите скамейки</p>
+                        <p class="p_block_info">А так же отмечайте те, которых нет</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="/script.js"></script>
 </body>
+
 </html>
