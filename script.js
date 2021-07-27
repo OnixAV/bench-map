@@ -19,7 +19,11 @@ DG.then(function () {
             .setLatLng(map.getCenter())
             .setContent('Доступ к определению местоположения отключён')
             .openOn(map);
-    });
+    })
 
+    .on('click', function(ev) { // Добавление маркера на карту
+        DG.marker(ev.latlng).addTo(map);
+    })
+    
     DG.control.location().addTo(map); // кнопка определения местоположения пользователя
 });
